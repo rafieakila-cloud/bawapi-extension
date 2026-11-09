@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rafieakila-cloud.github.io/bawapi-extension/sitemap.xml
