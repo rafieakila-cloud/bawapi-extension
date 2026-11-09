@@ -3,131 +3,168 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bawapi Extension Free — Free Firefox Add-on (All Tools in One Button)</title>
-  <meta name="description" content="Bawapi Extension Free is a free Firefox add-on: draw on any webpage, notes, website info (IP, server), random web button, programming language detector, ad & tracker counter, on-page bee game, Search Omni, and Kuda AI powered by your own OpenRouter API key. Download the ZIP and load it in about:debugging.">
-  <meta name="keywords" content="Bawapi Extension, Firefox add-on, Firefox extension, free browser extension, draw on browser, Firefox addon, about:debugging, Kuda AI, Search Omni">
+  <title>Bawapi Extension Free — Free Firefox Add-ons (Pick Only What You Need)</title>
+  <meta name="description" content="Bawapi Extension Free: a collection of free Firefox add-ons you can install individually — Draw On Browser, Notes On, Information On (IP & server), Random Web, Check Language Program (detect the programming language of any website), APK Guard, Camelo (ad & tracker counter), Game On (on-page bee game), Search Omni (virtual browser), and Kuda AI Ask (OpenRouter). Or download the All-in-One bundle.">
+  <meta name="keywords" content="Bawapi Extension, Firefox add-on, Firefox extension, free browser extension, draw on browser, APK Guard, Camelo, Kuda AI, Search Omni, Game On, Check Language Program">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/svg+xml" href="icon.svg">
   <link rel="canonical" href="https://rafieakila-cloud.github.io/bawapi-extension/">
   <!-- Search engine verification: replace the content values after you register the site in
-       Google Search Console and Bing Webmaster Tools (see TUTORIAL below). -->
+       Google Search Console and Bing Webmaster Tools (see HOW TO GET LISTED below). -->
   <!-- <meta name="google-site-verification" content="PASTE_YOUR_GOOGLE_CODE_HERE"> -->
   <!-- <meta name="msvalidate.01" content="PASTE_YOUR_BING_CODE_HERE"> -->
   <style>
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: #ffffff;
-      color: #1a1a1a;
-      font-family: Georgia, 'Times New Roman', serif;
-      line-height: 1.6;
-    }
-    .wrap { max-width: 760px; margin: 0 auto; padding: 24px 20px 48px; }
-    header { text-align: center; padding: 32px 0 8px; border-bottom: 2px solid #1a1a1a; }
-    .bee { font-size: 64px; }
-    h1 { font-size: 2rem; margin: 8px 0 4px; font-weight: 700; }
-    .free { display: inline-block; background: #f5a623; border: 2px solid #1a1a1a; border-radius: 999px; padding: 2px 14px; font-size: .85rem; font-weight: 700; }
+    body { margin: 0; background: #ffffff; color: #1a1a1a; font-family: Georgia, 'Times New Roman', serif; line-height: 1.6; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 24px 20px 48px; }
+    header { text-align: center; padding: 28px 0 10px; border-bottom: 2px solid #1a1a1a; }
+    header img { width: 72px; height: 72px; }
+    h1 { font-size: 2rem; margin: 10px 0 4px; }
+    .free { display: inline-block; background: #f5a623; border: 2px solid #1a1a1a; border-radius: 999px; padding: 2px 14px; font-size: .85rem; vertical-align: middle; }
     .tagline { color: #444; margin: 6px 0 0; }
-    .download { text-align: center; padding: 28px 0; }
-    .btn {
-      display: inline-block;
-      background: #f5a623;
-      border: 3px solid #1a1a1a;
-      border-radius: 12px;
-      padding: 16px 34px;
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #1a1a1a;
-      text-decoration: none;
-      box-shadow: 4px 4px 0 #1a1a1a;
-      transition: transform .1s;
-      font-family: inherit;
-    }
-    .btn:hover { transform: translate(-2px, -2px); }
-    .meta { color: #666; font-size: .85rem; margin-top: 10px; }
     h2 { font-size: 1.25rem; border-bottom: 1px solid #ddd; padding-bottom: 6px; margin-top: 36px; }
-    ul { padding-left: 22px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; margin-top: 14px; }
+    .card { border: 1px solid #ddd; border-radius: 10px; padding: 12px; display: flex; flex-direction: column; gap: 6px; background: #fff; }
+    .card .top { display: flex; align-items: center; gap: 10px; }
+    .card img { width: 44px; height: 44px; }
+    .card h3 { font-size: .95rem; margin: 0; }
+    .card p { font-size: .8rem; color: #444; margin: 0; min-height: 3.2em; }
+    .btn { display: inline-block; text-align: center; border: 2px solid #1a1a1a; border-radius: 8px; padding: 8px 10px; font-size: .85rem; font-weight: 700; color: #1a1a1a; background: #f6f6f6; text-decoration: none; font-family: inherit; }
+    .btn:hover { background: #ececec; }
+    .btn.primary { background: #f5a623; box-shadow: 3px 3px 0 #1a1a1a; }
+    .bundle { text-align: center; padding: 22px; background: #fffdf5; border: 2px solid #1a1a1a; border-radius: 12px; margin-top: 18px; }
+    .bundle .btn { font-size: 1.05rem; padding: 14px 26px; }
+    .meta { color: #666; font-size: .8rem; margin-top: 8px; }
+    ol, ul { padding-left: 22px; }
     li { margin: 4px 0; }
     code { background: #f3f3f3; border: 1px solid #e0e0e0; border-radius: 4px; padding: 1px 6px; font-size: .9em; }
-    pre { background: #f8f8f8; border: 1px solid #e0e0e0; border-radius: 8px; padding: 10px 12px; font-size: .85rem; overflow-x: auto; }
-    footer { text-align: center; color: #777; font-size: .8rem; border-top: 1px solid #eee; padding-top: 16px; margin-top: 36px; }
+    .android { text-align: center; margin-top: 28px; padding: 22px; border: 1px dashed #bbb; border-radius: 12px; color: #333; }
+    .android .logos { display: flex; justify-content: center; gap: 18px; margin: 12px 0; }
+    .android .logos img { width: 56px; height: 56px; }
+    .badge { display: inline-block; background: #eee; border: 1px solid #ccc; border-radius: 6px; padding: 2px 10px; font-size: .75rem; letter-spacing: .08em; }
+    .extlist { columns: 2; font-size: .9rem; }
+    footer { text-align: center; color: #777; font-size: .78rem; border-top: 1px solid #eee; padding-top: 16px; margin-top: 36px; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="bee">🐝</div>
+      <img src="icon.svg" alt="Bawapi Extension Free logo">
       <h1>Bawapi Extension <span class="free">FREE</span></h1>
-      <p class="tagline">Every tool you need in your Firefox toolbar — free, no account required.</p>
+      <p class="tagline">Free Firefox add-ons — pick only what you need, or grab the All-in-One bundle.</p>
     </header>
 
-    <div class="download">
-      <a class="btn" href="Bawapi-Extension-v1.0.0.zip" download="Bawapi-Extension-v1.0.0.zip">⬇ Download ZIP (v1.0.0)</a>
-      <p class="meta">17 KB · Firefox · Manifest V2 · No ads, no tracking of your own</p>
+    <h2>Extension Bawapi for Firefox</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="top"><img src="ext-icons/draw.svg" alt="Draw On Browser icon"><h3>Draw On Browser</h3></div>
+        <p>Draw over any webpage. Toggle with the toolbar button, Ctrl+Shift+D, or Esc to finish.</p>
+        <a class="btn" href="Bawapi-DrawOnBrowser-v1.1.0.zip" download>Download</a>
+      </div>
+      <div class="card">
+        <div class="top"><img src="ext-icons/notes.svg" alt="Notes On icon"><h3>Notes On</h3></div>
+        <p>Quick notes saved automatically in your browser. No account, no cloud.</p>
+        <a class="btn" href="Bawapi-NotesOn-v1.1.0.zip" download>Download</a>
+      </div>
+      <div class="card">
+        <div class="top"><img src="ext-icons/info.svg" alt="Information On icon"><h3>Information On</h3></div>
+        <p>URL, domain, protocol, IP address (DNS-over-HTTPS), server and X-Powered-By headers.</p>
+        <a class="btn" href="Bawapi-InformationOn-v1.1.0.zip" download>Download</a>
+      </div>
+      <div class="card">
+        <div class="top"><img src="ext-icons/random.svg" alt="Random Web icon"><h3>Random Web</h3></div>
+        <p>One dice click opens a random knowledge/Linux page. Never gambling, never adult content.</p>
+        <a class="btn" href="Bawapi-RandomWeb-v1.1.0.zip" download>Download</a>
+      </div>
+      <div class="card">
+        <div class="top"><img src="ext-icons/techcheck.svg" alt="Check Language Program icon"><h3>Check Language Program</h3></div>
+        <p>Detects the programming language &amp; framework behind any website — WordPress, React, Next.js, Django, and more.</p>
+        <a class="btn" href="Bawapi-CheckLanguage-v1.1.0.zip" download>Download</a>
+      </div>
+      <div class="card">
+        <div class="top"><img src="ext-icons/apkgard.svg" alt="APK Guard icon"><h3>APK Guard</h3></div>
+        <p>Blocks <code>.apk</code> download links on any page — perfect for parental control. Toggle from the toolbar.</p>
+        <a class="btn" href="Bawapi-APKGuard-v1.1.0.zip" download>Download</a>
+      </div>
+      <div class="card">
+        <div class="top"><img src="ext-icons/camelo.svg" alt="Camelo icon"><h3>Camelo</h3></div>
+        <p>Counts ads, trackers and analytics on the page — total shown as a badge on the toolbar icon.</p>
+        <a class="btn" href="Bawapi-Camelo-v1.1.0.zip" download>Download</a>
+      </div>
+      <div class="card">
+        <div class="top"><img src="ext-icons/gameon.svg" alt="Game On icon"><h3>Game On</h3></div>
+        <p>Release a bee that wanders across the page. Click it to harvest honey. Includes official game downloader links.</p>
+        <a class="btn" href="Bawapi-GameOn-v1.1.0.zip" download>Download</a>
+      </div>
+      <div class="card">
+        <div class="top"><img src="ext-icons/omni.svg" alt="Search Omni icon"><h3>Search Omni</h3></div>
+        <p>Search the web in a new tab — or in a separate <b>virtual browser window</b>.</p>
+        <a class="btn" href="Bawapi-SearchOmni-v1.1.0.zip" download>Download</a>
+      </div>
+      <div class="card">
+        <div class="top"><img src="ext-icons/kuda.svg" alt="Kuda AI icon"><h3>Kuda AI Ask!</h3></div>
+        <p>AI chat in your toolbar using your own OpenRouter API key. Stored locally, never shared.</p>
+        <a class="btn" href="Bawapi-KudaAI-v1.1.0.zip" download>Download</a>
+      </div>
     </div>
 
-    <h2>What's inside?</h2>
-    <ul>
-      <li>🖌️ <b>Draw On Browser</b> — draw over any webpage. Press <code>Ctrl+Shift+D</code>, draw, press <code>Esc</code> to finish.</li>
-      <li>📝 <b>Notes On</b> — quick notes, saved automatically in your browser.</li>
-      <li>ℹ️ <b>Information On</b> — URL, domain, protocol, IP address (DNS-over-HTTPS), server &amp; framework headers.</li>
-      <li>🎲 <b>Random Web</b> — one dice roll opens a random knowledge/Linux webpage (never gambling, never adult content).</li>
-      <li>🔎 <b>Check Language Program</b> — guess the programming language &amp; framework behind any website (WordPress, React, Next.js, Django…).</li>
-      <li>🛡️ <b>APK Guard</b> — blocks <code>.apk</code> download links on any page (great for parental control).</li>
-      <li>🕵️ <b>Camelo</b> — counts ads, trackers and analytics scripts loaded by the page, with a badge counter on the icon.</li>
-      <li>🐝 <b>Game On</b> — releases a bee that wanders across the page; click it to harvest honey 🍯. Includes official game downloader links.</li>
-      <li>🔍 <b>Search Omni</b> — search the web in a new tab or in a <b>virtual window</b> (separate popup browser window).</li>
-      <li>🐎 <b>Kuda AI Ask!</b> — AI chat using your own OpenRouter API key, stored only on your device.</li>
-    </ul>
+    <div class="bundle">
+      <h2 style="border:none;margin-top:0;padding-bottom:0;">Want everything?</h2>
+      <p class="meta">The All-in-One version bundles all 10 tools into a single toolbar button.</p>
+      <a class="btn primary" href="Bawapi-Extension-All-v1.1.0.zip" download>⬇ Download All — Bawapi Extension (v1.1.0)</a>
+      <p class="meta">17 KB · Firefox · Manifest V2 · Free &amp; open source</p>
+    </div>
 
     <h2>How to install on Firefox</h2>
     <ol>
-      <li>Click <b>Download ZIP</b> above.</li>
+      <li>Download the add-on(s) you want above.</li>
       <li><b>Extract</b> the ZIP — you will see <code>manifest.json</code> inside.</li>
-      <li>Open Firefox and go to <code>about:debugging</code> in the address bar.</li>
-      <li>Click <b>This Firefox</b> → <b>Load Temporary Add-on…</b></li>
-      <li>Select <code>manifest.json</code> from the extracted folder.</li>
-      <li>The bee 🐝 appears in your toolbar. Click it to open all tools.</li>
+      <li>Open Firefox → <code>about:debugging</code> → <b>This Firefox</b> → <b>Load Temporary Add-on…</b></li>
+      <li>Select <code>manifest.json</code>. Repeat for each add-on you downloaded.</li>
+      <li>The icons appear in your toolbar — click any of them to use it.</li>
     </ol>
+    <p class="meta">Extensions loaded via about:debugging are temporary and disappear when Firefox closes. For permanent installation, the add-on must be signed by Mozilla — submit it for free as an <i>unlisted (self-distributed)</i> add-on at <a href="https://addons.mozilla.org/developers/">addons.mozilla.org/developers</a> and install the signed <code>.xpi</code>.</p>
 
-    <h2>Tutorial — managing &amp; keeping the extension</h2>
-    <h3>1. Temporary vs. permanent installation</h3>
-    <p>
-      Extensions loaded via <code>about:debugging</code> are <b>temporary</b>: they disappear when you close Firefox.
-      For a permanent install, the add-on must be <b>signed by Mozilla</b>. You can submit it for free as an
-      <i>unlisted (self-distributed)</i> add-on at
-      <a href="https://addons.mozilla.org/developers/">addons.mozilla.org/developers</a>,
-      then install the signed <code>.xpi</code> file permanently.
-    </p>
-
-    <h3>2. Keyboard shortcuts</h3>
+    <h2>Tutorial — keyboard shortcuts &amp; Kuda AI</h2>
     <ul>
-      <li><code>Ctrl+Shift+D</code> — toggle draw mode on the active tab</li>
-      <li><code>Ctrl+Shift+U</code> — open the panel (if configured)</li>
+      <li><code>Ctrl+Shift+D</code> — toggle draw mode (Draw On Browser)</li>
+      <li>Kuda AI Ask! — create a key at <a href="https://openrouter.ai/keys">openrouter.ai/keys</a>, paste it in the extension, click <b>Simpan Pengaturan</b>, done.</li>
     </ul>
 
-    <h3>3. Kuda AI Ask! setup</h3>
-    <ol>
-      <li>Create a free API key at <a href="https://openrouter.ai/keys">openrouter.ai/keys</a>.</li>
-      <li>Click the bee 🐝 in the toolbar → scroll to <b>Kuda AI Ask!</b></li>
-      <li>Paste your key, pick a model (e.g. <code>openai/gpt-4o-mini</code>), click <b>Simpan Pengaturan</b>.</li>
-      <li>Start chatting — your key never leaves your device except to OpenRouter.</li>
-    </ol>
+    <div class="android">
+      <span class="badge">COMING SOON</span>
+      <h2 style="border:none;margin-top:12px;padding-bottom:0;">Bawapi Extension for Android</h2>
+      <div class="logos">
+        <img src="firefox.svg" alt="Firefox logo">
+        <img src="android.svg" alt="Android logo">
+      </div>
+      <p>Firefox for Android support is on the way. Your favorite Bawapi tools, on your phone — very soon.</p>
+    </div>
 
-    <h3>4. Troubleshooting</h3>
-    <ul>
-      <li>Nothing happens when drawing? Internal pages (<code>about:*</code>, <code>addons.mozilla.org</code>) block extensions for security — try a normal website.</li>
-      <li>Camelo shows 0? Reload the page after installing; counters only see requests made after the extension loaded.</li>
-      <li>APK Guard blocking too much? Toggle it off in the panel; it applies to pages loaded afterwards.</li>
+    <h2>Extension Bawapi on Firefox</h2>
+    <p>The complete list — all free, all open source:</p>
+    <ul class="extlist">
+      <li>Draw On Browser — draw on any webpage</li>
+      <li>Notes On — auto-saving notes</li>
+      <li>Information On — IP &amp; server info</li>
+      <li>Random Web — random knowledge pages</li>
+      <li>Check Language Program — what language is this site?</li>
+      <li>APK Guard — block .apk downloads</li>
+      <li>Camelo — ad &amp; tracker counter</li>
+      <li>Game On — the wandering bee game</li>
+      <li>Search Omni — virtual browser search</li>
+      <li>Kuda AI Ask! — OpenRouter AI in your toolbar</li>
+      <li><b>Bawapi Extension (All-in-One)</b> — all of the above</li>
     </ul>
 
     <h2>FAQ</h2>
-    <p><b>Is it really free?</b> Yes. Open source, no accounts, no payments.</p>
-    <p><b>Does it steal my data?</b> No. Notes, API keys and scores are stored locally via Firefox's <code>storage.local</code>. The IP lookup uses Cloudflare DoH; Kuda AI uses your own OpenRouter key.</p>
-    <p><b>Chrome/Edge?</b> This build targets Firefox (Manifest V2). A Chrome port would need a Manifest V3 rewrite.</p>
+    <p><b>Is it really free?</b> Yes — no accounts, no payments, no ads.</p>
+    <p><b>Does it steal my data?</b> No. Notes, keys and scores stay in Firefox's local storage. IP lookups use Cloudflare DNS-over-HTTPS; Kuda AI uses your own OpenRouter key.</p>
+    <p><b>Chrome / Edge?</b> Firefox only for now (Manifest V2).</p>
 
     <footer>
-      <p>Bawapi Extension Free · Made with 🐝 by Bawapi · <a href="https://github.com/rafieakila-cloud/bawapi-extension">Source code</a></p>
+      <p>Bawapi Extension Free · <a href="https://github.com/rafieakila-cloud/bawapi-extension">Source code</a></p>
+      <p>Firefox is a trademark of the Mozilla Foundation. Android is a trademark of Google LLC. These logos are used nominatively to indicate compatibility.</p>
     </footer>
   </div>
 </body>
